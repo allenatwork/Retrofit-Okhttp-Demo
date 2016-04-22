@@ -74,4 +74,17 @@ public class DisplayPhotoFragment extends BaseFragment {
         super.onSaveInstanceState(outState);
         outState.putString(IMAGE_URL, url);
     }
+
+    @Override
+    public String getName() {
+        return "DisplayPhotoFragment";
+    }
+
+    @Override
+    public void onDestroy() {
+        mImageView.setImageBitmap(null);
+        mImageView.setImageDrawable(null);
+        mImageView = null;
+        super.onDestroy();
+    }
 }

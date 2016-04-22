@@ -113,4 +113,9 @@ public class ListCategoryFragment extends BaseFragment {
         super.onSaveInstanceState(outState);
         outState.putParcelableArrayList(EXTRA_LIST, (ArrayList<? extends Parcelable>) catCategoryList);
     }
+
+    @Override
+    public String getName() {
+        return "ListCatFragment";
+    }
 }

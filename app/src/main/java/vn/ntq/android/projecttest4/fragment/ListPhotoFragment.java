@@ -105,4 +105,9 @@ public class ListPhotoFragment extends BaseFragment {
             }
         });
     }
+
+    @Override
+    public String getName() {
+        return "ListPhotoFragment";
+    }
 }
