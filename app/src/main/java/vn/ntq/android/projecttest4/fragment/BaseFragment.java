@@ -1,9 +1,11 @@
 package vn.ntq.android.projecttest4.fragment;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
+import vn.ntq.android.projecttest4.MainActivity;
 import vn.ntq.android.projecttest4.R;
 
 
@@ -19,5 +21,17 @@ public class BaseFragment extends Fragment {
             if (isAddtoBackstack) transaction.addToBackStack(fragment.getClass().toString());
             transaction.commit();
         }
+    }
+
+    public void showLoading() {
+        Activity activity = getActivity();
+        if (activity != null && activity instanceof MainActivity)
+            ((MainActivity) getActivity()).showDialogRequesting();
+    }
+
+    public void hideLoading() {
+        Activity activity = getActivity();
+        if (activity != null && activity instanceof MainActivity)
+            ((MainActivity) getActivity()).hideDialogRequesting();
     }
 }

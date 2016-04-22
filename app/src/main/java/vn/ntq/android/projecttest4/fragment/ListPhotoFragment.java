@@ -86,6 +86,7 @@ public class ListPhotoFragment extends BaseFragment {
     }
 
     public void getListCat() {
+        showLoading();
         Retrofit retrofit = LoveCatClient.getClient();
         CatService catService = retrofit.create(CatService.class);
         catService.getListCat().enqueue(new Callback<CatService.Response>() {
@@ -94,11 +95,13 @@ public class ListPhotoFragment extends BaseFragment {
                 listCat = response.body().getListCat().getListCat();
                 adapter = new ListPhotoAdapter(listCat);
                 mRecyclerView.setAdapter(adapter);
+                hideLoading();
             }
 
             @Override
             public void onFailure(Call<CatService.Response> call, Throwable t) {
                 Log.d("Retrofit", t.getMessage());
+                hideLoading();
             }
         });
     }
