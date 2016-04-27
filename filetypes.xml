@@ -1,9 +1,9 @@
 <application>
   <component name="FileTypeManager" version="16">
     <extensionMap>
-      <mapping pattern="bg_favourite_selector" type="XML" />
-      <mapping pattern="menu_selector" type="XML" />
       <mapping pattern="selector_menu_item" type="XML" />
+      <mapping pattern="menu_selector" type="XML" />
+      <mapping pattern="bg_favourite_selector" type="XML" />
       <mapping pattern="status_flag_bg" type="XML" />
     </extensionMap>
   </component>
