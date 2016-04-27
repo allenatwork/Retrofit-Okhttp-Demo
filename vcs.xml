@@ -114,6 +114,10 @@
           <option name="url" value="https://github.com/KOHOH1992/AsyncTaskLoader.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/sunilmishra/Android-AsyncTaskLoader-with-MVP.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="E:\Samplecode" />
